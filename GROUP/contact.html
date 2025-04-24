@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Green Acres Farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+      
+      <!-- Sub-Header (Top Bar) -->
+      <div class="sub-header">
+        <div class="sub-header-container">
+            <div class="sub-header-contact">
+                 
+            </div>
+            <div class="sub-header-links">
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="IMAGES/logo.jpg" alt="FarmFresh Logo">
+                <div class="logo-text">Fallah's Dream Group <span>of Companies</span></div>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Connect With Our Farm</h1>
+            <p>We'd love to hear from you! Whether you have questions about our produce, want to visit the farm, or are interested in our CSA program, reach out anytime.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Fill out the form below or use our contact information to reach our farming team.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Farm Contact Info</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h4>Farm Location</h4>
+                            <p>Joseph Massah Fallah Village<br>Second Kolojo Montserrado County</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+231776757272">+231776-757-272</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@greenacres.farm">info@fallahdreamgroup.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-content">
+                            <h4>Farm Stand Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 8:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Farmer" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="CSA">CSA Program</option>
+                                <option value="Visit">Farm Visit</option>
+                                <option value="Wholesale">Wholesale Inquiry</option>
+                                <option value="Other">Other Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us how we can help..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.595347085735!2d-93.6488519241646!3d42.36841497118792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee6f171b4d5e27%3A0x5a1a55f7785e3f4e!2sIowa%20State%20University!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="fdg-footer">
+        <div class="fdg-footer-container">
+            <div class="fdg-footer-column fdg-logo-area">
+                <img src="IMAGES/logo.jpg" alt="Fallah Dream Group Logo" class="fdg-logo">
+                <p class="fdg-tagline">Growing the future, naturally</p>
+                <p>Committed to sustainable agriculture and quality produce since 2010.</p>
+            </div>
+            
+            <div class="fdg-footer-column">
+                <h3 class="fdg-footer-heading">Our Farms</h3>
+                <ul class="fdg-footer-links">
+                    <li><a href="#">Organic Vegetables</a></li>
+                    <li><a href="#">Fruit Orchards</a></li>
+                    <li><a href="#">Grain Fields</a></li>
+                    <li><a href="#">Rubber Farm</a></li>
+                    <li><a href="#">Greenhouses</a></li>
+                </ul>
+            </div>
+            
+            <div class="fdg-footer-column">
+                <h3 class="fdg-footer-heading">Quick Links</h3>
+                <ul class="fdg-footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="product.html">Our Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="fdg-footer-column">
+                <h3 class="fdg-footer-heading">Contact Us</h3>
+                <div class="fdg-contact-info">
+                    <span class="fdg-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <span> Second Kolojo Montserrado County</span>
+                </div>
+                <div class="fdg-contact-info">
+                    <span class="fdg-contact-icon"><i class="fas fa-phone"></i></span>
+                    <span>+231555740951</span>
+                </div>
+                <div class="fdg-contact-info">
+                    <span class="fdg-contact-icon"><i class="fas fa-envelope"></i></span>
+                    <span>contact@fallahdream.com</span>
+                </div>
+                
+                <div class="fdg-social-links">
+                    <a href="#" class="fdg-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="fdg-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="fdg-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="fdg-social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fdg-footer-bottom">
+            <p class="fdg-copyright">
+                &copy; 2023 Fallah Dream Group. All Rights Reserved. 
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

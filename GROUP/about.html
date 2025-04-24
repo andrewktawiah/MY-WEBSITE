@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Farm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="about.css">
+  
+  <style>
+    /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+      <!-- Sub-Header (Top Bar) -->
+      <div class="sub-header">
+        <div class="sub-header-container">
+            <div class="sub-header-contact">
+                 
+            </div>
+            <div class="sub-header-links">
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="IMAGES/logo.jpg" alt="FarmFresh Logo">
+                <div class="logo-text">Fallah's Dream Group <span>of Companies</span></div>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="product.html">Products</a></li>
+                
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+  <section class="about-section">
+    <div class="about-container">
+      <!-- Image Column -->
+      <div class="about-image">
+        <div class="image-wrapper">
+          <img src="IMAGES/hom.jpg" alt="Our Farm Family" class="main-img">
+          <div class="experience-badge">
+            <span class="years">HOME</span>
+            <span class="text">Place of Residence</span>
+          </div>
+        </div>
+        <div class="image-grid">
+          <img src="IMAGES/gust.jpg" alt="Our Fields" class="grid-img">
+          <img src="IMAGES/guss.jpg" alt="Fresh Produce" class="grid-img">
+        </div>
+      </div>
+      
+      <!-- Content Column -->
+      <div class="about-content">
+        <span class="section-subtitle">Our Story</span>
+        <h2 class="section-title">Growing With Passion Since 1998</h2>
+        <p class="about-text">
+          Green Valley Farms began as a small family operation with just 10 acres of land. Today, we manage over 500 acres of certified organic farmland, supplying fresh, sustainable produce to communities throughout the region.
+        </p>
+        
+        <div class="about-features">
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Organic Practices</h3>
+              <p>100% chemical-free farming using sustainable methods that nurture the land</p>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="feature-content">
+              <h3> Fruitful and Freshness</h3>
+              <p> Our Products are very fresh and eye catching as per your desire</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Acres Farmed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Crop Varieties</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Organic Certified</span>
+          </div>
+        </div>
+        
+        <div class="about-cta">
+          <a href="#" class="cta-btn">Meet Our Team <i class="fas fa-arrow-right"></i></a>
+          <div class="signature">
+            <img src="IMAGES/gusss.jpg" alt="Farm Owner Signature">
+            <span>Joseph K Fallah<br>Farm Owners</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="owners-section">
+    <div class="lead-text">
+        <h2>Meet Our Farm Owners</h2>
+        <p>The passionate individuals behind our sustainable farming practices</p>
+    </div>
+    <div class="owners-grid">
+        <!-- Owner 1 -->
+        <div class="owner-card">
+            <div class="owner-image">
+                <img src="IMAGES/gusss.jpg" alt="John Farmer">
+                <div class="owner-overlay">
+                    <h3 class="owner-name">Mr Joseph Fallah</h3>
+                    <p class="owner-position">Founder & Head Farmer</p>
+                </div>
+            </div>
+            <div class="owner-info">
+                <h3 class="owner-name">Mr. Fallah</h3>
+                <p class="owner-position">(originator & Head Farmer)</p>
+                <p class="owner-bio">With over 40 years of farming experience, John leads our operations with a focus on sustainable agriculture and soil health.</p>
+                
+                <div class="owner-contact">
+                    <a href="tel:+1234567890" class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                         +231 776-221-334
+                    </a>
+                    <a href="mailto:john@example.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Email
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Owner 2 -->
+        <div class="owner-card">
+            <div class="owner-image">
+                <img src="IMAGES/guss.jpg" alt="Sarah Grower">
+                <div class="owner-overlay">
+                    <h3 class="owner-name">Mr. Augustine M. Fallah </h3>
+                    <p class="owner-position">(CO-Owner & Executive Director). </p>
+                </div>
+            </div>
+            <div class="owner-info">
+                <h3 class="owner-name">Mr. Augustine M. Fallah</h3>
+                <p class="owner-position">Co-Owner & Managing Director</p>
+                <p class="owner-bio">Gus connects the company with international and local businesses and ensure proper standard of the farm policy in line with national and international best labour policies. He sets organizational vision and direction, ensure efficiency, 
+                    oversee budgeting, financial reporting and fundraising. </p>
+                
+                <div class="owner-contact">
+                    <a href="tel:+1234567891" class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        +1(651) 307-0249
+                    </a>
+                    <a href="mailto:sarah@example.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Email
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Owner 3 -->
+        <div class="owner-card">
+            <div class="owner-image">
+                <img src="IMAGES/lus.jpg" alt="lus">
+                <div class="owner-overlay">
+                    <h3 class="owner-name"> Mr. J. Lux Fallah</h3>
+                    <p class="owner-position">Farm Manager </p>
+                </div>
+            </div>
+            <div class="owner-info">
+                <h3 class="owner-name">Mr. J. Lux Fallah</h3>
+                <p class="owner-position">Operations Manager</p>
+                <p class="owner-bio">Lux runs the day to-day routines of the farm to ensure it meets customer’s satisfaction and the final consumers. With over 10years of practical and theoretical knowledge in the field of agriculture, he has and continues to exert
+                     his expertise overseeing planting, harvesting,  and animal cares. </p>
+                
+                <div class="owner-contact">
+                    <a href="tel:+1234567892" class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                     +231 776-757-272
+                    </a>
+                    <a href="mailto:michael@example.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Email
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+  <footer class="fdg-footer">
+    <div class="fdg-footer-container">
+        <div class="fdg-footer-column fdg-logo-area">
+            <img src="IMAGES/logo.jpg" alt="Fallah Dream Group Logo" class="fdg-logo">
+            <p class="fdg-tagline">Growing the future, naturally</p>
+            <p>Committed to sustainable agriculture and quality produce since 2010.</p>
+        </div>
+        
+        <div class="fdg-footer-column">
+            <h3 class="fdg-footer-heading">Our Farms</h3>
+            <ul class="fdg-footer-links">
+                <li><a href="#">Organic Vegetables</a></li>
+                <li><a href="#">Fruit Orchards</a></li>
+                <li><a href="#">Grain Fields</a></li>
+                <li><a href="#">Rubber Farm</a></li>
+                <li><a href="#">Greenhouses</a></li>
+            </ul>
+        </div>
+        
+        <div class="fdg-footer-column">
+            <h3 class="fdg-footer-heading">Quick Links</h3>
+            <ul class="fdg-footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Our Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="fdg-footer-column">
+            <h3 class="fdg-footer-heading">Contact Us</h3>
+            <div class="fdg-contact-info">
+                <span class="fdg-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                <span> Second Kolojo Montserrado County</span>
+            </div>
+            <div class="fdg-contact-info">
+                <span class="fdg-contact-icon"><i class="fas fa-phone"></i></span>
+                <span>+231555740951</span>
+            </div>
+            <div class="fdg-contact-info">
+                <span class="fdg-contact-icon"><i class="fas fa-envelope"></i></span>
+                <span>contact@fallahdream.com</span>
+            </div>
+            
+            <div class="fdg-social-links">
+                <a href="#" class="fdg-social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="fdg-social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="fdg-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="fdg-social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fdg-footer-bottom">
+        <p class="fdg-copyright">
+            &copy; 2023 Fallah Dream Group. All Rights Reserved. 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
+
+
+ 

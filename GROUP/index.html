@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fallah group of companies </title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+         
+    </style>
+</head>
+<body>
+    <!-- Sub-Header (Top Bar) -->
+    <div class="sub-header">
+        <div class="sub-header-container">
+            <div class="sub-header-contact">
+                 
+            </div>
+            <div class="sub-header-links">
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="IMAGES/logo.jpg" alt="FarmFresh Logo">
+                <div class="logo-text">Fallah's Dream Group <span>of Companies</span></div>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+<div class="banner-container">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url(IMAGES/rb1.avif);">
+        <div class="slide-content">
+            <p>Welcome To</p>
+            <h1>Fallah Group of Companies</h1>
+            <p>Discover our sustainable farming practices that deliver the freshest organic produce straight to your table.</p>
+            <a href="#" class="cta-button">Explore Our Farms</a>
+        </div>
+        <div class="slide-image">
+            <img src="IMAGES/or1.avif" alt="Organic Vegetables">
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('IMAGES/or3.jpg');">
+        <div class="slide-content">
+            <h1>Modern Agricultural Solutions</h1>
+            <p>Innovative technology meets traditional farming wisdom for maximum yield and sustainability.</p>
+            <a href="#" class="cta-button">Our Technology</a>
+        </div>
+        <div class="slide-image">
+            <img src="IMAGES/coo1.jpg" alt="Organic Vegetables">
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('IMAGES/paw5.avif');">
+        <div class="slide-content">
+            <h1> Vegetables Freshness</h1>
+            <p>Experience the difference with produce harvested at peak ripeness and delivered with care.</p>
+            <a href="#" class="cta-button">Shop Produce</a>
+        </div>
+        <div class="slide-image">
+            <img src="IMAGES/vg2.avif" alt="Fresh Produce">
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="arrow arrow-left" onclick="prevSlide()">❮</div>
+    <div class="arrow arrow-right" onclick="nextSlide()">❯</div>
+
+    <!-- Dots Navigation -->
+    <div class="dots-container">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let slideInterval;
+
+    // Initialize slider
+    function startSlider() {
+        slideInterval = setInterval(() => {
+            nextSlide();
+        }, 4000); // Change slide every 4 seconds
+    }
+
+    // Go to specific slide
+    function goToSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+        resetInterval();
+    }
+
+    // Next slide
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    // Previous slide
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    // Reset timer when manually changing slides
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startSlider();
+    }
+
+    // Start the slider
+    startSlider();
+
+    // Pause on hover
+    const banner = document.querySelector('.banner-container');
+    banner.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    banner.addEventListener('mouseleave', startSlider);
+</script>
+
+<div class="container">
+    <div class="mission-vision-container">
+        <div class="mission-box">
+            <div class="icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="box-title">Our Mission</h3>
+            <p class="box-content">
+                To cultivate sustainable, organic farming practices that nourish our community while preserving the environment. We are committed to producing the highest quality farm products through ethical, eco-friendly methods that promote biodiversity and soil health for future generations.
+            </p>
+ </div>
+        
+        <div class="vision-box">
+            <div class="icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="box-title">Our Vision</h3>
+            <p class="box-content">
+                To become a regional leader in sustainable agriculture, inspiring a movement towards locally-sourced, organic food. We envision a future where our farm serves as an educational hub, connecting people to the source of their food and fostering a deeper appreciation for nature's bounty.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<section class="products-section">
+    <div class="lead-text">
+        <h2>Our Farm Products</h2>
+        <p>Fresh, organic produce grown with care and sustainable practices</p>
+    </div>
+
+    <div class="products-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/paw3.jpg" alt="Organic Tomatoes">
+                        <span class="product-badge">Seasonal</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Vegetables</span>
+                        <h3 class="product-title">PAWPAW</h3>
+                        <p class="product-description">Juicy, vine-ripened pawpaw grown without synthetic pesticides.</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/vg3.avif" alt="Fresh Strawberries">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fruits</span>
+                        <h3 class="product-title">Fresh Vegetables</h3>
+                        <p class="product-description">Sweet, hand-picked Vegetables from our fields.</p>
+                        <div class="product-footer">
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/or4.avif" alt="Farm Fresh Eggs">
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Dairy</span>
+                        <h3 class="product-title">Farm Fresh Oranges</h3>
+                        <p class="product-description">Free-range Oranges  </p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/coo2.jpg" alt="Organic Honey">
+                        <span class="product-badge">Limited</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Coconut</span>
+                        <h3 class="product-title">Fruitful Coconut</h3>
+                        <p class="product-description">Raw, unfiltered honey from our own beehives.</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/pla1.jpg" alt="Organic Lettuce">
+                        <span class="product-badge">Seasonal</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">plantain</span>
+                        <h3 class="product-title">Plantain</h3>
+                        <p class="product-description"> Plantain grown in our greenhouses.</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/cass.avif" alt="Organic Honey">
+                        <span class="product-badge">Limited</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cassava</span>
+                        <h3 class="product-title">Fruitful Cassava</h3>
+                        <p class="product-description">Raw, unfiltered Cassava from our own Greenfarms</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/pi3.jpg" alt="Organic Honey">
+                        <span class="product-badge">Unlimited</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pineapples</span>
+                        <h3 class="product-title">Fruitful Pineapples</h3>
+                        <p class="product-description">Raw, unfiltered Pineapples from our own Greenfarms</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/but1.avif" alt="Organic Honey">
+                        <span class="product-badge">Unlimited</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Avogado</span>
+                        <h3 class="product-title">Fruitful Avogado</h3>
+                        <p class="product-description">Raw, unfiltered Avogado from our own Greenfarms</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="IMAGES/rb2.avif" alt="Organic Honey">
+                        <span class="product-badge">Unlimited</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Rubber</span>
+                        <h3 class="product-title">Rubber</h3>
+                        <p class="product-description">Raw, unfiltered latex from our own plantation</p>
+                        <div class="product-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-nav carousel-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav carousel-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</section>
+
+<section class="farming-services">
+    <div class="section-header">
+      <h2>Our Farming Services</h2>
+      <p>Quality agricultural solutions for modern farming needs</p>
+    </div>
+    
+    <div class="services-container">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="IMAGES/vg3.avif" alt="Organic Farming">
+          <div class="service-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Organic Farming</h3>
+          <p>Chemical-free farming methods that prioritize soil health and environmental sustainability while producing nutritious crops.</p>
+          <a href="#" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="IMAGES/ff.jpg" alt="Irrigation Systems">
+          <div class="service-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Smart Irrigation</h3>
+          <p>Water-efficient irrigation systems that optimize water usage and reduce waste through automated technology.</p>
+          <a href="#" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="IMAGES/f1.avif" alt="Crop Protection">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Crop Protection</h3>
+          <p>Integrated pest management solutions that protect your crops while minimizing environmental impact.</p>
+          <a href="#" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="IMAGES/og.avif" alt="Soil Testing">
+          <div class="service-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3> Unlimited Vegetables as requested</h3>
+          <p>Comprehensive soil testing services to determine nutrient levels and optimize fertilizer application.</p>
+          <a href="#" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="IMAGES/fff.avif" alt="Farm Equipment">
+          <div class="service-icon">
+            <i class="fas fa-tractor"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Equipment Rental</h3>
+          <p>Modern farm machinery available for rent to help with planting, harvesting, and field maintenance.</p>
+          <a href="#" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="IMAGES/ag.avif" alt="Farm Consulting">
+          <div class="service-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3>Farm Consulting</h3>
+          <p>Expert agricultural consultants to help improve your farm's productivity and profitability.</p>
+          <a href="#" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.querySelector('.carousel-track');
+        const cards = document.querySelectorAll('.product-card');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const dots = document.querySelectorAll('.dot');
+        
+        let currentIndex = 0;
+        const cardWidth = cards[0].offsetWidth + 30; // width + margin
+        const visibleCards = Math.min(3, Math.floor(window.innerWidth / cardWidth));
+        const totalCards = cards.length;
+        
+        // Initialize carousel
+        updateCarousel();
+        
+        // Navigation handlers
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % (totalCards - visibleCards + 1);
+            updateCarousel();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + (totalCards - visibleCards + 1)) % (totalCards - visibleCards + 1);
+            updateCarousel();
+        });
+        
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+        
+        // Update carousel position and active dot
+        function updateCarousel() {
+            const offset = -currentIndex * cardWidth;
+            track.style.transform = `translateX(${offset}px)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            
+            // Disable buttons at boundaries
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= totalCards - visibleCards;
+        }
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const newVisibleCards = Math.min(3, Math.floor(window.innerWidth / cardWidth));
+            if (newVisibleCards !== visibleCards) {
+                currentIndex = 0;
+                updateCarousel();
+            }
+        });
+    });
+</script>
+
+
+
+<section class="owners-section">
+    <div class="lead-text">
+        <h2>Meet Our Farm Owners</h2>
+        <p>The passionate individuals behind our sustainable farming practices</p>
+    </div>
+    <div class="owners-grid">
+        <!-- Owner 1 -->
+        <div class="owner-card">
+            <div class="owner-image">
+                <img src="IMAGES/gusss.jpg" alt="John Farmer">
+                <div class="owner-overlay">
+                    <h3 class="owner-name">Mr Joseph Fallah</h3>
+                    <p class="owner-position">Founder & Head Farmer</p>
+                </div>
+            </div>
+            <div class="owner-info">
+                <h3 class="owner-name">Mr. Fallah</h3>
+                <p class="owner-position">(originator & Head Farmer)</p>
+                <p class="owner-bio">With over 40 years of farming experience, John leads our operations with a focus on sustainable agriculture and soil health.</p>
+                
+                <div class="owner-contact">
+                    <a href="tel:+1234567890" class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                    +231 776-221-334
+                    </a>
+                    <a href="mailto:john@example.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Email
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Owner 2 -->
+        <div class="owner-card">
+            <div class="owner-image">
+                <img src="IMAGES/gust.jpg" alt="Sarah Grower">
+                <div class="owner-overlay">
+                    <h3 class="owner-name">Mr. Augustine M. Fallah </h3>
+                    <p class="owner-position">(CO-Owner & Executive Director). </p>
+                </div>
+            </div>
+            <div class="owner-info">
+                <h3 class="owner-name">Mr. Augustine M. Fallah</h3>
+                <p class="owner-position">Co-Owner & Managing Director</p>
+                <p class="owner-bio">Gus connects the company with international and local businesses and ensure proper standard of the farm policy in line with national and international best labour policies. He sets organizational vision and direction, ensure efficiency, 
+                    oversee budgeting, financial reporting and fundraising. </p>
+                
+                <div class="owner-contact">
+                    <a href="tel:+1234567891" class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        +1(651) 307-0249
+                    </a>
+                    <a href="mailto:sarah@example.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Email
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Owner 3 -->
+        <div class="owner-card">
+            <div class="owner-image">
+                <img src="IMAGES/lus.jpg" alt="lus">
+                <div class="owner-overlay">
+                    <h3 class="owner-name"> Mr. J. Lux Fallah</h3>
+                    <p class="owner-position">Farm Manager </p>
+                </div>
+            </div>
+            <div class="owner-info">
+                <h3 class="owner-name">Mr. J. Lux Fallah</h3>
+                <p class="owner-position">Operations Manager</p>
+                <p class="owner-bio">Lux runs the day to-day routines of the farm to ensure it meets customer’s satisfaction and the final consumers. With over 10years of practical and theoretical knowledge in the field of agriculture, he has and continues to exert
+                     his expertise overseeing planting, harvesting,  and animal cares. </p>
+                
+                <div class="owner-contact">
+                    <a href="tel:+1234567892" class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        +231 776-757-272
+                    </a>
+                    <a href="mailto:michael@example.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        Email
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="fdg-footer">
+    <div class="fdg-footer-container">
+        <div class="fdg-footer-column fdg-logo-area">
+            <img src="IMAGES/logo.jpg" alt="Fallah Dream Group Logo" class="fdg-logo">
+            <p class="fdg-tagline">Growing the future, naturally</p>
+            <p>Committed to sustainable agriculture and quality produce since 2010.</p>
+        </div>
+        
+        <div class="fdg-footer-column">
+            <h3 class="fdg-footer-heading">Our Farms</h3>
+            <ul class="fdg-footer-links">
+                <li><a href="#">Organic Vegetables</a></li>
+                <li><a href="#">Fruit Orchards</a></li>
+                <li><a href="#">Grain Fields</a></li>
+                <li><a href="#">Rubber Farm</a></li>
+                <li><a href="#">Greenhouses</a></li>
+            </ul>
+        </div>
+        
+        <div class="fdg-footer-column">
+            <h3 class="fdg-footer-heading">Quick Links</h3>
+            <ul class="fdg-footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Our Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="fdg-footer-column">
+            <h3 class="fdg-footer-heading">Contact Us</h3>
+            <div class="fdg-contact-info">
+                <span class="fdg-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                <span> Second Kolojo Montserrado County</span>
+            </div>
+            <div class="fdg-contact-info">
+                <span class="fdg-contact-icon"><i class="fas fa-phone"></i></span>
+                <span>+231 776-757-272</span>
+            </div>
+            <div class="fdg-contact-info">
+                <span class="fdg-contact-icon"><i class="fas fa-envelope"></i></span>
+                <span>contact@fallahdream.com</span>
+            </div>
+            
+            <div class="fdg-social-links">
+                <a href="#" class="fdg-social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="fdg-social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="fdg-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="fdg-social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fdg-footer-bottom">
+        <p class="fdg-copyright">
+            &copy; 2023 Fallah Dream Group. All Rights Reserved. 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
